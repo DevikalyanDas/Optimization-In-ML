@@ -396,7 +396,7 @@ class NoisyStudent():
         elif self.args.optimizer == 'RMSPROP':
             self.optimizer = torch.optim.RMSprop(self.model.parameters(), lr=lr, weight_decay=weight_decay)
         
-        if self.self.args.scheduler != 'none':
+        if self.args.scheduler != 'none':
             self.scheduler = torch.optim.lr_scheduler.MultiStepLR(self.optimizer, milestones=[20,40], gamma=0.1)
     def save_result(self, epoch=None):
 #         from data.data import write_result
@@ -495,7 +495,7 @@ class NoisyStudent():
                 if step % 10 == 0:
                     pbar.set_postfix_str(f'loss = {train_loss / step}, acc = {train_acc / step}')
             
-            if self.self.args.scheduler != 'none':
+            if self.args.scheduler != 'none':
                 self.scheduler.step()    
 
             train_loss /= len(self.train_loader)
