@@ -85,7 +85,7 @@ def plot_graphs_full(data1,logs_path,texti = None):
 if __name__ == '__main__':
     
     import argparse
-
+    from itertools import product
     
     paser = argparse.ArgumentParser()
 
@@ -95,11 +95,12 @@ if __name__ == '__main__':
     file_loss = 'loss.csv'
     file_acc = 'accuracy.csv'
 
-    from itertools import product
-
+    
+    args = paser.parse_args()
+    
     bt_sz = [64,128]
     total_epoch = 50
-    l_rate = float(args.learning_rate)  #1e-2,
+    l_rate = [float(args.learning_rate)]  #1e-2,
     path_select = ['new_more','new_scheduler']
     optim_used = ['ADAM','ADAMW','RMSPROP','SGD']
     # scheduler_used = ['none','cyclr']
@@ -127,7 +128,7 @@ if __name__ == '__main__':
         id_part = run_id+1
         path = f'./logs/{pth_s}/csvs/{comment}'
         
-        plot_paths = f'./logs/plots_new_{l_rate}'
+        plot_paths = f'./logs/plots_new_{lr}'
     #     print(comment)
         pathlib.Path(plot_paths).mkdir(parents=True, exist_ok=True)
         
