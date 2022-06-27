@@ -1,5 +1,4 @@
-# Optimization-In-ML
-##Impact of Learning Rate, Optimizer, Learning Rate Scheduler and Batch Size on OOD generalization in Deep learning
+# Impact of Learning Rate, Optimizer, Learning Rate Scheduler and Batch Size on OOD generalization in Deep learning
 
 This repository is for the project of Optimization in ML course by Prof. Sebastian Hack at Saaralnd University.
 
