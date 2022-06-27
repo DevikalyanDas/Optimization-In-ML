@@ -8,11 +8,12 @@ For the code reproducibility:
     Things to keep in mind here: 
     bt: batch size. For this experiment we have used 64 and 128
     opt: optimizer. For this experiment we have used ['ADAM', 'SGD', 'RMSPROP', 'ADAMW']. Please select from this list only and pass
-    lrn_rt: learning rate 
+    lrn_rt: learning rate. Please select from [1e-2,1e-4]
     ep: epoch
     schdlr: Learning Rate scheduler. Need to select from ['none','step_lr']
   
  
-3. To plot the curves: run ```python plotting_curves.py -lrn_rt=1e-4 ```.
+3. To plot the curves: run ```python plotting_curves.py -lrn_rt=1e-4 ```. 
+    lrn_rate: Learning rate . Please select lr from [1e-2,1e-4]
 
 **NB**: All the train and validation results obtained during training have been uploaded in the ```./logs``` folder.
