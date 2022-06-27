@@ -4,7 +4,7 @@ This repository is for the project of Optimization in ML course by Prof. Sebasti
 
 For the code reproducibility:
 1. Run ```data_setting_notebook.ipynb ``` which will download data and then arrange the files accordingly as required by the training code. Please take note of the dependencies and install them accordingly. Basically you require the *zipfile, pathlib, shutil* as dependencies for this part.
-2. Once the first part is completed, just run the main.py using the command ```python main.py -bt=128 -opt='ADAM' -lrn_rt=1e-2 -ep=50 -schdlr='step_lr' ``` . 
+2. Once the first part is completed, just run the main.py using the command ```python main_check.py -bt=128 -opt='ADAM' -lrn_rt=1e-2 -ep=50 -schdlr='step_lr' ``` . 
     Things to keep in mind here: 
     bt: batch size. For this experiment we have used 64 and 128
     opt: optimizer. For this experiment we have used ['ADAM', 'SGD', 'RMSPROP', 'ADAMW']. Please select from this list only and pass
